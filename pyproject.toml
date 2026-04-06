@@ -2,18 +2,19 @@
 name = "smart-waste-openenv"
 version = "0.1.0"
 description = "OpenEnv environment for municipal waste complaint routing"
+authors = [
+  { name = "Anu A" },
+  { name = "Karthikeyan R" }
+]
 readme = "README.md"
 requires-python = ">=3.10"
 
-authors = [
-    {name = "Anu A"},
-    {name = "Karthikeyan R"}
-]
 dependencies = [
-    "fastapi",
-    "uvicorn",
-    "pydantic",
-    "openenv-core>=0.2.0"
+  "fastapi",
+  "uvicorn",
+  "pydantic",
+  "openenv-core>=0.2.0"
 ]
+
 [project.scripts]
 server = "server.app:main"
