@@ -1,0 +1,25 @@
+name: smart-waste-management-openenv
+version: 0.2
+description: AI environment for municipal waste complaint routing
+
+observation_space:
+  complaint: string
+  location: string
+  step: string
+
+action_space:
+  category: string
+  department: string
+  inspect: boolean
+  assign_truck: boolean
+  cleanup_complete: boolean
+
+reward_range: [0.0, 1.0]
+
+tasks:
+  - easy
+  - medium
+  - hard
+
+tags:
+  - openenv

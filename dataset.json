@@ -1,0 +1,482 @@
+[
+  {
+    "complaint": "Construction dust causing pollution",
+    "location": "Ward 13",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 4",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Dumping near residential area",
+    "location": "Ward 7",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 7",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Garbage overflowing near market",
+    "location": "Ward 6",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 1",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Illegal dumping near lake",
+    "location": "Ward 4",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 12",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Illegal dumping near lake",
+    "location": "Ward 5",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 9",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Construction dust causing pollution",
+    "location": "Ward 10",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Garbage truck skipped this street",
+    "location": "Ward 18",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Dumping near residential area",
+    "location": "Ward 17",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 7",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 12",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Overflowing public trash bin",
+    "location": "Ward 3",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Blocked drain causing bad smell",
+    "location": "Ward 18",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Garbage overflowing near market",
+    "location": "Ward 5",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 13",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Garbage truck skipped this street",
+    "location": "Ward 7",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Garbage truck skipped this street",
+    "location": "Ward 2",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Dumping near residential area",
+    "location": "Ward 12",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 11",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Blocked drain causing bad smell",
+    "location": "Ward 13",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Dumping near residential area",
+    "location": "Ward 12",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Garbage truck skipped this street",
+    "location": "Ward 12",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Construction dust causing pollution",
+    "location": "Ward 1",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Street littered with plastic waste",
+    "location": "Ward 12",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Illegal dumping near lake",
+    "location": "Ward 8",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Illegal dumping near lake",
+    "location": "Ward 20",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Garbage overflowing near market",
+    "location": "Ward 4",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Waste not collected for several days",
+    "location": "Ward 3",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Overflowing public trash bin",
+    "location": "Ward 13",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Overflowing public trash bin",
+    "location": "Ward 12",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Garbage truck skipped this street",
+    "location": "Ward 2",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Garbage overflowing near market",
+    "location": "Ward 1",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Construction dust causing pollution",
+    "location": "Ward 14",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Waste not collected for several days",
+    "location": "Ward 10",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Illegal dumping near lake",
+    "location": "Ward 18",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Blocked drain causing bad smell",
+    "location": "Ward 5",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Street littered with plastic waste",
+    "location": "Ward 8",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Construction dust causing pollution",
+    "location": "Ward 4",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Street littered with plastic waste",
+    "location": "Ward 5",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Garbage truck skipped this street",
+    "location": "Ward 17",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 13",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Garbage overflowing near market",
+    "location": "Ward 5",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Street littered with plastic waste",
+    "location": "Ward 13",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Dumping near residential area",
+    "location": "Ward 3",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Blocked drain causing bad smell",
+    "location": "Ward 8",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Construction dust causing pollution",
+    "location": "Ward 8",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Dumping near residential area",
+    "location": "Ward 11",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Garbage truck skipped this street",
+    "location": "Ward 15",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Garbage overflowing near market",
+    "location": "Ward 2",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Garbage overflowing near market",
+    "location": "Ward 5",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Illegal dumping near lake",
+    "location": "Ward 3",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Waste not collected for several days",
+    "location": "Ward 6",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Street littered with plastic waste",
+    "location": "Ward 17",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Street littered with plastic waste",
+    "location": "Ward 10",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Waste not collected for several days",
+    "location": "Ward 19",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 18",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 19",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Illegal dumping near lake",
+    "location": "Ward 15",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Overflowing public trash bin",
+    "location": "Ward 11",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Street littered with plastic waste",
+    "location": "Ward 20",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Garbage truck skipped this street",
+    "location": "Ward 17",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Overflowing public trash bin",
+    "location": "Ward 4",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Street littered with plastic waste",
+    "location": "Ward 8",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Illegal dumping near lake",
+    "location": "Ward 13",
+    "category": "illegal_dumping",
+    "department": "waste_collection_unit"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 5",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Garbage overflowing near market",
+    "location": "Ward 12",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Garbage truck skipped this street",
+    "location": "Ward 5",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Blocked drain causing bad smell",
+    "location": "Ward 17",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Garbage truck skipped this street",
+    "location": "Ward 13",
+    "category": "drain_blockage",
+    "department": "drainage_team"
+  },
+  {
+    "complaint": "Garbage truck skipped this street",
+    "location": "Ward 7",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Waste not collected for several days",
+    "location": "Ward 14",
+    "category": "street_cleaning",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Construction dust causing pollution",
+    "location": "Ward 10",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 3",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Dust from road construction",
+    "location": "Ward 12",
+    "category": "garbage_collection",
+    "department": "sanitation_team"
+  },
+  {
+    "complaint": "Overflowing public trash bin",
+    "location": "Ward 19",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  },
+  {
+    "complaint": "Garbage overflowing near market",
+    "location": "Ward 13",
+    "category": "dust_pollution",
+    "department": "environmental_control"
+  }
+]
