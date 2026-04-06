@@ -1,4 +1,9 @@
+import sys
+import os
 from fastapi import FastAPI
+
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 from env import WasteEnv, Action
 
 app = FastAPI()
