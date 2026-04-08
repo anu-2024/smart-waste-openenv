@@ -17,10 +17,16 @@ action_space:
 reward_range: [0.0, 1.0]
 
 tasks:
-  - easy
-  - medium
-  - hard
+  - name: easy
+    grader: tasks.easy
+
+  - name: medium
+    grader: tasks.medium
+
+  - name: hard
+    grader: tasks.hard
 
 tags:
   - openenv
-  entrypoint: inference.py
+
+entrypoint: inference.py
