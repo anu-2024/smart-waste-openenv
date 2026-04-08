@@ -1,11 +1,15 @@
 
 def easy_task(a):
-    return 1.0 if a.get("category") else 0.0
+    if a.get("category"):
+        return 0.9
+    return 0.1
+
 
 def medium_task(a):
     if a.get("category") and a.get("department"):
-        return 1.0
-    return 0.5
+        return 0.8
+    return 0.4
+
 
 def hard_task(a):
     if (
@@ -15,5 +19,5 @@ def hard_task(a):
         and a.get("assign_truck")
         and a.get("cleanup_complete")
     ):
-        return 1.0
-    return 0.5
+        return 0.85
+    return 0.45
