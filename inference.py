@@ -45,7 +45,6 @@ def main():
         while not done and step_count < 8:
             step_count += 1
 
-            # simple default action
             action = Action(
                 category="garbage_collection",
                 department="sanitation_team"
@@ -53,12 +52,14 @@ def main():
 
             obs, reward, done, info = env.step(action)
 
-            rewards.append(reward)
+            reward_value = float(reward)
+
+            rewards.append(reward_value)
 
             log_step(
                 step=step_count,
                 action="resolve",
-                reward=reward,
+                reward=reward_value,
                 done=done,
                 error=None
             )
