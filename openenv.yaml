@@ -18,13 +18,13 @@ reward_range: [0.0, 1.0]
 
 tasks:
   - name: easy
-    grader: easy_task
+    grader: tasks.easy_task
 
   - name: medium
-    grader: medium_task
+    grader: tasks.medium_task
 
   - name: hard
-    grader: hard_task
+    grader: tasks.hard_task
 
 tags:
   - openenv
