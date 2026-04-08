@@ -22,12 +22,8 @@ def hard_task(action, observation=None):
     return 0.45
 
 
-# Explicit grader registry (important for validator)
 GRADERS = {
     "easy": easy_task,
     "medium": medium_task,
     "hard": hard_task,
 }
-    else:
-        score = 0.45
-    return float(score)
