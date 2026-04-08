@@ -1,17 +1,17 @@
 
-def easy_task(a):
+def easy(a):
     if a.get("category"):
         return 0.9
     return 0.1
 
 
-def medium_task(a):
+def medium(a):
     if a.get("category") and a.get("department"):
         return 0.8
     return 0.4
 
 
-def hard_task(a):
+def hard(a):
     if (
         a.get("category")
         and a.get("department")
