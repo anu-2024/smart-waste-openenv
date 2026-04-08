@@ -1,16 +1,20 @@
-def easy_task(action, observation):
+def easy_task(action, observation=None):
     if action.get("category"):
-        return 0.9
-    return 0.1
+        score = 0.9
+    else:
+        score = 0.1
+    return float(score)
 
 
-def medium_task(action, observation):
+def medium_task(action, observation=None):
     if action.get("category") and action.get("department"):
-        return 0.8
-    return 0.4
+        score = 0.8
+    else:
+        score = 0.4
+    return float(score)
 
 
-def hard_task(action, observation):
+def hard_task(action, observation=None):
     if (
         action.get("category")
         and action.get("department")
@@ -18,5 +22,7 @@ def hard_task(action, observation):
         and action.get("assign_truck")
         and action.get("cleanup_complete")
     ):
-        return 0.85
-    return 0.45
+        score = 0.85
+    else:
+        score = 0.45
+    return float(score)
