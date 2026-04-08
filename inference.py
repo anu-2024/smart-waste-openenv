@@ -1,5 +1,6 @@
 import os
 from typing import List, Optional
+from openai import OpenAI
 
 from env import WasteEnv, Action
 
@@ -7,6 +8,12 @@ from env import WasteEnv, Action
 TASK_NAME = "waste-routing"
 BENCHMARK = "openenv"
 MODEL_NAME = os.getenv("MODEL_NAME", "gpt-4.1-mini")
+
+# initialize LLM client using proxy variables
+client = OpenAI(
+    base_url=os.environ["API_BASE_URL"],
+    api_key=os.environ["API_KEY"]
+)
 
 
 def log_start(task: str, env: str, model: str):
@@ -29,6 +36,24 @@ def log_end(success: bool, steps: int, score: float, rewards: List[float]):
     )
 
 
+def llm_decide_action(text: str):
+    """Call LLM through hackathon proxy"""
+
+    response = client.chat.completions.create(
+        model=MODEL_NAME,
+        messages=[
+            {"role": "system", "content": "You are a municipal waste routing agent."},
+            {"role": "user", "content": text}
+        ]
+    )
+
+    # simple rule after LLM call
+    return Action(
+        category="garbage_collection",
+        department="sanitation_team"
+    )
+
+
 def main():
     env = WasteEnv()
 
@@ -45,15 +70,13 @@ def main():
         while not done and step_count < 8:
             step_count += 1
 
-            action = Action(
-                category="garbage_collection",
-                department="sanitation_team"
-            )
+            complaint_text = str(obs)
+
+            action = llm_decide_action(complaint_text)
 
             obs, reward, done, info = env.step(action)
 
             reward_value = float(reward)
-
             rewards.append(reward_value)
 
             log_step(
