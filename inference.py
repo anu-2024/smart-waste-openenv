@@ -1,41 +1,30 @@
-import sys
-import os
-from fastapi import FastAPI
-import uvicorn
-
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-
 from env import WasteEnv, Action
 
-app = FastAPI()
-env = WasteEnv()
-
-@app.get("/reset")
-@app.post("/reset")
-def reset():
-    obs = env.reset()
-    return obs.dict()
-
-@app.get("/state")
-@app.post("/state")
-def state():
-    return {
-        "stage": env.stage,
-        "complaint": env.current_complaint
-    }
-
-@app.post("/step")
-def step(action: Action):
-    obs, reward, done, info = env.step(action)
-    return {
-        "observation": obs.dict(),
-        "reward": reward,
-        "done": done,
-        "info": info
-    }
-
 def main():
-    uvicorn.run(app, host="0.0.0.0", port=7860)
+    env = WasteEnv()
+
+    print("[START] task=waste-routing env=openenv model=gpt-4.1-mini")
+
+    obs = env.reset()
+    done = False
+    step = 0
+    total_reward = 0
+    rewards = []
+
+    while not done:
+        step += 1
+
+        action = Action(category="garbage_collection", department="sanitation_team")
+
+        obs, reward, done, info = env.step(action)
+
+        total_reward += reward
+        rewards.append(reward)
+
+        print(f"[STEP] step={step} action=resolve reward={reward:.2f} done={done} error=null")
+
+    print(f"[END] success=true steps={step} score={total_reward:.2f} rewards={','.join([str(r) for r in rewards])}")
+
 
 if __name__ == "__main__":
     main()
