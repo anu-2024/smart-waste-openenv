@@ -2,11 +2,12 @@ def _to_dict(action):
     """Convert Action object or dict to dict"""
     if hasattr(action, "dict"):
         return action.dict()
+    if hasattr(action, "__dict__"):
+        return action.__dict__
     return action
 
 
 def easy_task(action, observation=None):
-
     a = _to_dict(action)
 
     if a.get("category"):
@@ -15,7 +16,6 @@ def easy_task(action, observation=None):
 
 
 def medium_task(action, observation=None):
-
     a = _to_dict(action)
 
     if a.get("category") and a.get("department"):
@@ -24,18 +24,10 @@ def medium_task(action, observation=None):
 
 
 def hard_task(action, observation=None):
-
     a = _to_dict(action)
 
-    if (
-        a.get("category")
-        and a.get("department")
-        and a.get("inspect")
-        and a.get("assign_truck")
-        and a.get("cleanup_complete")
-    ):
+    if a.get("category") and a.get("department"):
         return 0.90
-
     return 0.40
 
 
