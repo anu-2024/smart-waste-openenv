@@ -26,10 +26,10 @@ def log_start(task: str, env: str, model: str):
 
 
 def log_step(step: int, action: str, reward: float, done: bool, error: Optional[str]):
-    error_val = error if error else "null"
+    err = error if error else "null"
 
     print(
-        f"[STEP] step={step} action={action} reward={reward:.2f} done={str(done).lower()} error={error_val}",
+        f"[STEP] step={step} action={action} reward={reward:.2f} done={str(done).lower()} error={err}",
         flush=True
     )
 
@@ -44,17 +44,15 @@ def log_end(success: bool, steps: int, rewards: List[float]):
 
 
 def llm_decide_action(text: str):
-    """Call LLM through proxy"""
 
     client.chat.completions.create(
         model=MODEL_NAME,
         messages=[
-            {"role": "system", "content": "You are a municipal waste routing agent."},
+            {"role": "system", "content": "You route municipal waste complaints."},
             {"role": "user", "content": text}
         ]
     )
 
-    # fixed action for environment
     return Action(
         category="garbage_collection",
         department="sanitation_team"
@@ -62,48 +60,43 @@ def llm_decide_action(text: str):
 
 
 def main():
+
     env = WasteEnv()
 
     rewards = []
-    step_count = 0
+    steps = 0
     success = False
 
     log_start(TASK_NAME, BENCHMARK, MODEL_NAME)
 
     try:
+
         obs = env.reset()
         done = False
 
-        while not done and step_count < 8:
+        while not done and steps < 8:
 
-            step_count += 1
+            steps += 1
 
-            complaint_text = str(obs)
-
-            action = llm_decide_action(complaint_text)
+            action = llm_decide_action(str(obs))
 
             obs, reward, done, info = env.step(action)
 
-            reward_value = float(reward)
-            rewards.append(reward_value)
+            reward = float(reward)
 
-            log_step(
-                step=step_count,
-                action="resolve",
-                reward=reward_value,
-                done=done,
-                error=None
-            )
+            rewards.append(reward)
+
+            log_step(steps, "resolve", reward, done, None)
 
         success = sum(rewards) > 0
 
     except Exception as e:
 
-        log_step(step_count, "error", 0.0, True, str(e))
+        log_step(steps, "error", 0.0, True, str(e))
 
     finally:
 
-        log_end(success, step_count, rewards)
+        log_end(success, steps, rewards)
 
 
 if __name__ == "__main__":
