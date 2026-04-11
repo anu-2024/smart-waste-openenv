@@ -7,12 +7,17 @@ from env import WasteEnv, Action
 
 TASK_NAME = "waste-routing"
 BENCHMARK = "openenv"
-MODEL_NAME = os.getenv("MODEL_NAME", "gpt-4.1-mini")
 
-# initialize LLM client using proxy variables
+API_BASE_URL = os.getenv("API_BASE_URL", "https://api.openai.com/v1")
+MODEL_NAME = os.getenv("MODEL_NAME", "gpt-4.1-mini")
+HF_TOKEN = os.getenv("HF_TOKEN")
+
+if HF_TOKEN is None:
+    raise ValueError("HF_TOKEN environment variable is required")
+
 client = OpenAI(
-    base_url=os.environ["API_BASE_URL"],
-    api_key=os.environ["API_KEY"]
+    base_url=API_BASE_URL,
+    api_key=HF_TOKEN
 )
 
 
@@ -22,24 +27,26 @@ def log_start(task: str, env: str, model: str):
 
 def log_step(step: int, action: str, reward: float, done: bool, error: Optional[str]):
     error_val = error if error else "null"
+
     print(
         f"[STEP] step={step} action={action} reward={reward:.2f} done={str(done).lower()} error={error_val}",
-        flush=True,
+        flush=True
     )
 
 
-def log_end(success: bool, steps: int, score: float, rewards: List[float]):
+def log_end(success: bool, steps: int, rewards: List[float]):
     rewards_str = ",".join(f"{r:.2f}" for r in rewards)
+
     print(
         f"[END] success={str(success).lower()} steps={steps} rewards={rewards_str}",
-        flush=True,
+        flush=True
     )
 
 
 def llm_decide_action(text: str):
-    """Call LLM through hackathon proxy"""
+    """Call LLM through proxy"""
 
-    response = client.chat.completions.create(
+    client.chat.completions.create(
         model=MODEL_NAME,
         messages=[
             {"role": "system", "content": "You are a municipal waste routing agent."},
@@ -47,7 +54,7 @@ def llm_decide_action(text: str):
         ]
     )
 
-    # simple rule after LLM call
+    # fixed action for environment
     return Action(
         category="garbage_collection",
         department="sanitation_team"
@@ -68,6 +75,7 @@ def main():
         done = False
 
         while not done and step_count < 8:
+
             step_count += 1
 
             complaint_text = str(obs)
@@ -87,15 +95,15 @@ def main():
                 error=None
             )
 
-        score = min(max(sum(rewards), 0), 1)
-        success = score > 0
+        success = sum(rewards) > 0
 
     except Exception as e:
+
         log_step(step_count, "error", 0.0, True, str(e))
-        score = 0
 
     finally:
-        log_end(success, step_count, score, rewards)
+
+        log_end(success, step_count, rewards)
 
 
 if __name__ == "__main__":
