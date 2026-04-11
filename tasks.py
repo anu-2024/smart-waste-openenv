@@ -1,5 +1,4 @@
 def _to_dict(action):
-    """Convert Action object or dict to dict safely"""
     try:
         if hasattr(action, "dict"):
             return action.dict()
@@ -12,30 +11,27 @@ def _to_dict(action):
     return {}
 
 
-def easy_task(action, observation=None):
+def easy_task(action, observation=None, info=None):
     a = _to_dict(action)
 
-    if a.get("category") is not None:
+    if a.get("category"):
         return 0.6
-
     return 0.4
 
 
-def medium_task(action, observation=None):
+def medium_task(action, observation=None, info=None):
     a = _to_dict(action)
 
     if a.get("category") and a.get("department"):
         return 0.7
-
     return 0.3
 
 
-def hard_task(action, observation=None):
+def hard_task(action, observation=None, info=None):
     a = _to_dict(action)
 
     if a.get("department") == "sanitation_team":
         return 0.8
-
     return 0.2
 
 
