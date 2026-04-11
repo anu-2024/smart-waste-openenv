@@ -80,9 +80,9 @@ def main():
 
             action = llm_decide_action(str(obs))
 
-            obs, reward, done, info = env.step(action)
+            obs, reward_obj, done, info = env.step(action)
 
-            reward = float(reward)
+            reward = reward_obj.score
 
             rewards.append(reward)
 
