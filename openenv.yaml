@@ -17,15 +17,15 @@ action_space:
 tasks:
   - name: easy
     difficulty: easy
-    grader: tasks.easy_task
+    grader: server.tasks.easy_task
 
   - name: medium
     difficulty: medium
-    grader: tasks.medium_task
+    grader: server.tasks.medium_task
 
   - name: hard
     difficulty: hard
-    grader: tasks.hard_task
+    grader: server.tasks.hard_task
 
 tags:
   - openenv
