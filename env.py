@@ -97,7 +97,7 @@ class WasteEnv:
             self.stage = 3
 
 
-        # stage 3 cleanup
+               # stage 3 cleanup
         elif self.stage == 3:
 
             if action.cleanup_complete:
@@ -107,6 +107,8 @@ class WasteEnv:
 
             done = True
 
+        # IMPORTANT: ensure reward always between (0,1)
+        reward = max(0.01, min(0.99, reward))
 
         return (
             Observation(
