@@ -13,15 +13,51 @@ def clamp(v):
 
 
 def easy_task(action, observation=None, info=None):
-    return clamp(0.55)
+    score = 0.3
+
+    if action.get("category"):
+        score += 0.2
+
+    if action.get("department"):
+        score += 0.2
+
+    return clamp(score)
 
 
 def medium_task(action, observation=None, info=None):
-    return clamp(0.65)
+    score = 0.2
+
+    if action.get("category"):
+        score += 0.2
+
+    if action.get("department"):
+        score += 0.2
+
+    if action.get("inspect"):
+        score += 0.2
+
+    return clamp(score)
 
 
 def hard_task(action, observation=None, info=None):
-    return clamp(0.75)
+    score = 0.2
+
+    if action.get("category"):
+        score += 0.15
+
+    if action.get("department"):
+        score += 0.15
+
+    if action.get("inspect"):
+        score += 0.15
+
+    if action.get("assign_truck"):
+        score += 0.15
+
+    if action.get("cleanup_complete"):
+        score += 0.15
+
+    return clamp(score)
 
 
 GRADERS = {
@@ -29,6 +65,3 @@ GRADERS = {
     "medium": medium_task,
     "hard": hard_task,
 }
-
-# 🔴 THIS LINE IS REQUIRED FOR OPENENV DISCOVERY
-__all__ = ["easy_task", "medium_task", "hard_task", "GRADERS"]
