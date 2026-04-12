@@ -1,17 +1,18 @@
-def safe_score(value):
+def safe_score(v):
     try:
-        v = float(value)
-    except Exception:
+        v = float(v)
+    except:
         v = 0.5
+
     if v <= 0:
         v = 0.01
     if v >= 1:
         v = 0.99
+
     return v
 
 
 def easy_task(action, observation=None, info=None):
-    # simple constant but validated
     return safe_score(0.55)
 
 
