@@ -1,11 +1,28 @@
+def clamp(v):
+    try:
+        v = float(v)
+    except:
+        v = 0.5
+
+    if v <= 0:
+        v = 0.01
+    if v >= 1:
+        v = 0.99
+
+    return v
+
+
 def easy_task(action, observation=None, info=None):
-    return 0.55
+    return {"score": clamp(0.55)}
+
 
 def medium_task(action, observation=None, info=None):
-    return 0.65
+    return {"score": clamp(0.65)}
+
 
 def hard_task(action, observation=None, info=None):
-    return 0.75
+    return {"score": clamp(0.75)}
+
 
 GRADERS = {
     "easy": easy_task,
