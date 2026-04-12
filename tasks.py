@@ -13,51 +13,18 @@ def clamp(v):
 
 
 def easy_task(action, observation=None, info=None):
-    score = 0.3
-
-    if action.get("category"):
-        score += 0.2
-
-    if action.get("department"):
-        score += 0.2
-
-    return clamp(score)
+    score = 0.5
+    return {"score": clamp(score)}
 
 
 def medium_task(action, observation=None, info=None):
-    score = 0.2
-
-    if action.get("category"):
-        score += 0.2
-
-    if action.get("department"):
-        score += 0.2
-
-    if action.get("inspect"):
-        score += 0.2
-
-    return clamp(score)
+    score = 0.6
+    return {"score": clamp(score)}
 
 
 def hard_task(action, observation=None, info=None):
-    score = 0.2
-
-    if action.get("category"):
-        score += 0.15
-
-    if action.get("department"):
-        score += 0.15
-
-    if action.get("inspect"):
-        score += 0.15
-
-    if action.get("assign_truck"):
-        score += 0.15
-
-    if action.get("cleanup_complete"):
-        score += 0.15
-
-    return clamp(score)
+    score = 0.7
+    return {"score": clamp(score)}
 
 
 GRADERS = {
