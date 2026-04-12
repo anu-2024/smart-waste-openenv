@@ -15,15 +15,19 @@ action_space:
   cleanup_complete: boolean
 
 tasks:
+
   - name: easy
+    type: grading
     difficulty: easy
     grader: tasks.easy_task
 
   - name: medium
+    type: grading
     difficulty: medium
     grader: tasks.medium_task
 
   - name: hard
+    type: grading
     difficulty: hard
     grader: tasks.hard_task
 
