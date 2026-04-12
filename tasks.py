@@ -1,4 +1,4 @@
-def safe_score(v):
+def safe(v):
     try:
         v = float(v)
     except:
@@ -13,15 +13,15 @@ def safe_score(v):
 
 
 def easy_task(action, observation=None, info=None):
-    return safe_score(0.55)
+    return {"score": safe(0.55)}
 
 
 def medium_task(action, observation=None, info=None):
-    return safe_score(0.65)
+    return {"score": safe(0.65)}
 
 
 def hard_task(action, observation=None, info=None):
-    return safe_score(0.75)
+    return {"score": safe(0.75)}
 
 
 GRADERS = {
